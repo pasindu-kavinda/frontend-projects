@@ -28,6 +28,18 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    .logo-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+    }
+
     nav {
         ul {
             display: flex;
@@ -118,7 +130,6 @@ main {
             &:not(:last-child) {
                 border-right: #333 solid 1px;
             }
-
         }
 
         .projects {
@@ -192,6 +203,10 @@ main {
     }
 }
 
+.footer {
+    text-align: center;
+    margin: 100px 0;
+}
 
 @media (max-width: 576px) {
     header {
@@ -277,6 +292,10 @@ main {
                 }
             }
         }
+    }
+
+    .footer {
+        margin: 10px 0;
     }
 
     .section-title{
