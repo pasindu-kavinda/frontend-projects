@@ -105,6 +105,8 @@ main {
         display: flex;
         flex-direction: row;
         border: #333 solid 1px;
+        border-left: none;
+        border-right: none;
 
         section {
             display: flex;
@@ -169,6 +171,25 @@ main {
             }
         }
     }
+
+    .reviews {
+        margin-top: 10px;
+
+        .cards {
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+
+            blockquote {
+                border:  var(--primary-color) solid 1px;
+                padding: 10px;
+                border-radius: 15px;
+                margin: 10px;
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+    }
 }
 
 
@@ -210,9 +231,7 @@ main {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            border-left: none;
-            border-right: none;
-
+            
             section {
                 width: 100%;
                 &:not(:last-child) {
@@ -233,6 +252,28 @@ main {
                 .card {
                     padding: 10px 20px;
                     background:  var(--secondary-color);
+                }
+            }
+        }
+
+        .reviews {
+            .cards {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                
+                blockquote {
+                    width: 95%;
+                    border-radius: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    footer {
+                        p {
+                            color: var(--primary-color);
+                        }
+                    }
                 }
             }
         }
