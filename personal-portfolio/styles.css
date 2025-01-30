@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #838080;
+    --secondary-color: #dddcdc;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --accent-color: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+            
+            li {
+                display: flex;
+                
+                a {
+                    color: var(--secondary-color);
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+
+                &:hover a {
+                    color: var(--accent-color);
+                }
+                
+                &:not(:last-child)::after {
+                    content: '/';
+                    padding-left: 10px;
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+}
+
+main {
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 60px 0;
+
+        h1 {
+            font-size: 40px;
+            color: var(--text-color);
+            margin-bottom: 18px;
+            font-family: "Shadows Into Light", serif;
+            font-weight: 600;
+            font-style: normal;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 14px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+
+        .logo-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        nav {
+            ul {
+                li{
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        .hero {
+            margin: 20px 0;
+
+            h1 {
+                font-size: 22px;
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
