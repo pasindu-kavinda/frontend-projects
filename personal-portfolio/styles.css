@@ -10,10 +10,14 @@
     --background-color: #f5f5f5;
     --text-color: #333;
     --accent-color: #fff;
+    --blue-color: #1641cf;
+
+    --font-family: 'Poppins', sans-serif;
+    --secondary-font-family: 'Shadows Into Light', serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family);
     background-color: #f5f5f5;
 }
 
@@ -65,7 +69,7 @@ main {
             font-size: 40px;
             color: var(--text-color);
             margin-bottom: 18px;
-            font-family: "Shadows Into Light", serif;
+            font-family: var(--secondary-font-family);
             font-weight: 600;
             font-style: normal;
             letter-spacing: 2px;
@@ -77,7 +81,81 @@ main {
             text-align: center;
         }
     }
+
+    .section-title {
+        font-family: var(--secondary-font-family);
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 2px;
+        font-size: 18px;
+        color: var(--text-color);
+        margin: 0 20px;
+    }
+
+    .experience-title {
+        font-family: var(--secondary-font-family);
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 2px;
+        font-size: 14px;
+        color: var(--text-color);
+    }
+
+    .info{
+        display: flex;
+        flex-direction: row;
+        border: #333 solid 1px;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 33%;
+            padding: 10px 0;
+            
+            &:not(:last-child) {
+                border-right: #333 solid 1px;
+            }
+
+        }
+
+        .projects {
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                gap: 10px;
+                
+                li {
+                    text-align: start;
+                    padding: 10px 20px;
+
+                    &:not(:last-child) {
+                        border-bottom: #333 solid 1px;
+                    }
+                }
+            }
+        }
+
+        .experience {
+            .card {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 0 20px;
+                margin-top: 10px;
+
+                a {
+                    color: var(--blue-color);
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 }
+
 
 @media (max-width: 576px) {
     header {
@@ -111,6 +189,13 @@ main {
                 font-size: 22px;
                 margin-bottom: 6px;
             }
+        }
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
         }
     }
 }
