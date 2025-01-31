@@ -9,3 +9,4 @@
 - [x] **Project 5: Tooltip UI** - [View 👀](/tooltip-ui/README.md)[Roadmap.sh Project URL](https://roadmap.sh/projects/tooltip-ui)
 - [x] **Project 6: Restricted Textarea** - [View 👀](/restricted-textarea/README.md)[Roadmap.sh Project URL](https://roadmap.sh/projects/restricted-textarea)
 - [x] **Project 7: Accordion** - [View 👀](/accordion/README.md)[Roadmap.sh Project URL](https://roadmap.sh/projects/accordion)
+- [x] **Project 8: Cookie Consent** - [View 👀](/cookie-consent/README.md)[Roadmap.sh Project URL](https://roadmap.sh/projects/cookie-consent)
