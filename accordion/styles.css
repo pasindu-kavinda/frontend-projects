@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.active {
+    display: block !important;
+    height: auto !important;
+    padding: 20px !important;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 100px;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .accordion-section {
+        max-width: 700px;
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .description {
+            font-size: 15px;
+        }
+
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .accordion-item {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .accordion-title {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    background-color: #111;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        background-color: #333;
+                    }
+
+                    &::after {
+                        content: '';
+                        border: solid white;
+                        border-width: 0 2px 2px 0;
+                        width: 4px;
+                        height: 4px;
+                        display: inline-block;
+                        padding: 3px;
+                        transform: rotate(45deg);
+                        margin-left: 10px;
+                    }
+                }
+
+                .accordion-content {
+                    display: none;
+                    height: 0;
+                    padding: 0;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    border: #333 solid 2px;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
