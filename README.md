@@ -11,3 +11,4 @@
 - [x] **Project 7: Accordion** - [View 👀](/accordion/README.md)[Roadmap.sh Project URL](https://roadmap.sh/projects/accordion)
 - [x] **Project 8: Cookie Consent** - [View 👀](/cookie-consent/README.md)[Roadmap.sh Project URL](https://roadmap.sh/projects/cookie-consent)
 - [x] **Project 9: Tabs** - [View 👀](/simple-tabs/README.md)[Roadmap.sh Project URL](https://roadmap.sh/projects/simple-tabs)
+- [x] **Project 10: Datepicker UI** - [View 👀](/datepicker-ui/README.md)[Roadmap.sh Project URL](https://roadmap.sh/projects/datepicker-ui)
