@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Form UI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="form-wrapper">
+                <form action="" class="form" aria-labelledby="Update an Profile">
+                    <h1 id="form-title">Update Profile</h1>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required aria-required="true" placeholder="What should we call you?" required>
+                        <span class="error" id="name-error" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="has-error" value="john@doe.com" type="email" id="email" name="email" aria-invalid="true" required aria-required="true" placeholder="user@example.com" required>
+                        <span class="error show" id="email-error" aria-live="polite">Email is already taken</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" required aria-required="true" placeholder="xxxxxxxx" required>
+                            <button type="button" id="toggle-password" aria-label="Show password" >
+                                <img src="eye.png" alt="show">
+                            </button>
+                        </div>
+                        <span class="error" id="password-error" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirm-password" name="confirm-password" required aria-required="true" placeholder="xxxxxxxx" required>
+                            <button type="button" id="toggle-confirm-password" aria-label="Show password" >
+                                <img src="eye.png" alt="show">
+                            </button>
+                        </div>
+                        <span class="error" id="confirm-password-error" aria-live="polite"></span>
+                    </div>
+                    <button type="submit">Update Profile</button>
+                </form>
+            </div>
+
+            <div class="progress-wrapper">
+                <div>
+                    <div class="precentage"><span>65%</span></div>
+                </div>
+                <span class="progress-title">Profile Completeness</span>
+                <div class="progress">
+                    <span class="progress-item done">Create account</span>
+                    <span class="progress-item done">Update roadmap progress</span>
+                    <span class="progress-item done">Setup public profile</span>
+                    <span class="progress-item">Complete your first project</span>
+                    <span class="progress-item">Invite your friends</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.flaticon.com/free-icons/eye" title="eye icons">Eye icons created by Gregor Cresnar - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/eye-password" title="eye password icons">Eye password icons created by sonnycandra - Flaticon</a>
+    </footer>
+</body>
+</html>
