@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <main>
+
+      <h1>Age Calculator</h1>
+
+      <form id="age-calculator">
+        <label for="dob">Select your birth date:</label>
+        <div class="form-control">
+          <input type="text" id="dob" autocomplete="off" disabled />
+          <button class="icon" id="dob-icon" type="button">
+            <img src="icon.png" alt="calendar icon" />
+          </button>
+        </div>
+        <span id="error"></span>
+        <button type="submit" id="calculate-btn">Calculate Age</button>
+      </form>
+
+      <div id="result"></div>
+
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
