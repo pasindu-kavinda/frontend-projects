@@ -99,6 +99,7 @@ main {
         max-width: 600px;
         padding: 20px 70px;
         gap: 15px;
+        border: #000 2px solid;
 
         .testimonial-content {
             text-align: center;
