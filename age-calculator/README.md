@@ -6,3 +6,7 @@
 ![Vite Badge](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=for-the-badge)
 
 > Roadmap.sh Project URL: https://roadmap.sh/projects/age-calculator
+
+## Output
+
+![output](./output.png)
