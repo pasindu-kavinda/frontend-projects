@@ -1,4 +1,6 @@
 import "../css/question.css";
+import Confetti from "react-confetti";
+import { RotateCcw } from "lucide-react";
 
 function Question({
   toggleIsRevealAnswer,
@@ -14,12 +16,17 @@ function Question({
       <div className="question-wrapper">
         {isFinish ? (
           <div className="finish">
+            <Confetti />
             You have completed all the questions
-            <button onClick={restart}>Start Over</button>
+            <button className="restart" onClick={restart}>
+              <RotateCcw />
+            </button>
           </div>
         ) : (
           <div>
-            <div className="question">{question.question}</div>
+            <div className="question">
+              <span>{question.question}</span>
+            </div>
             <div className={`answer ${isRevealAnswer ? "show" : "hide"}`}>
               <span>{question.answer}</span>
             </div>
