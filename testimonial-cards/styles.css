@@ -20,7 +20,6 @@ main {
     align-items: center;
     gap: 20px;
     margin: 30px;
-    max-width: 400px;
 
     .testimonial {
         display: flex;
@@ -32,6 +31,8 @@ main {
     }
 
     .testimonial-1 {
+        max-width: 400px;
+
         .testimonial-content {
             background: #000;
             color:  #ddd;
@@ -52,11 +53,14 @@ main {
     }
 
     .testimonial-2 {
+        max-width: 400px;
         border: #000 2px solid;
     }
 
     .testimonial-3 {
+        max-width: 600px;
         flex-direction: row;
+
         .image {
             width: 400px;
 
@@ -89,9 +93,63 @@ main {
                 }
             }
         }
+    }
 
-        .ratings {
-            
+    .testimonial-4 {
+        max-width: 600px;
+        padding: 20px 70px;
+        gap: 15px;
+
+        .testimonial-content {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-info {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testimonial-author {
+            justify-content: center;
+            gap: 10px;
+
+            .image:not(.active) {
+                width: 50px;
+                height: 50px;
+                opacity: .4;
+            }
+        }
+
+        .prev, .next {
+            cursor: pointer;
+        }
+
+        .prev::before, .next::after {
+            content: '';
+            border: solid rgb(22, 21, 21);
+            border-width: 0 2px 2px 0;
+            width: 3px;
+            height: 3px;
+            display: inline-block;
+            padding: 2px;
+        }
+
+        .prev::before {
+            transform: rotate(135deg);
+        }
+
+        .next::after {
+            transform: rotate(-45deg);
+        }
+
+        .author-name {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 5px;
         }
     }
 }
@@ -128,13 +186,39 @@ main {
     }
 }
 
-@media screen and (max-width: 560px) {
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #04034b;
+    padding: 20px;
+
+    a {
+        font-size: 14px;
+        color: #adadad;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .testimonials {
+        margin: 10px;
+        
         .testimonial-3 {
             flex-direction: column;
 
             .image {
                 width: 100%;
+            }
+        }
+
+        .testimonial-4 {
+            padding: 20px;
+            gap: 20px;
+
+            .testimonial-info {
+                justify-content: space-between;
+                gap: 0px;
             }
         }
     }
